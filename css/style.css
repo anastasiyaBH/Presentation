@@ -1,0 +1,12 @@
+.inform-line{
+  display: flex;
+}
+
+.inform-left-side{
+  text-align: left;
+  flex-basis: 80%;
+}
+
+.inform-right-side{
+  text-align: center;
+}

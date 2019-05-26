@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Type Script</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/sky.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="icon" href="./assets/img/ts1.png">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section >
+				<h1><b>Type</b>Script</h1>
+				<img src="./assets/img/ts1.png" height="400px">
+				<p>Created by <a href="mailto:495anastasiabh@gmail.com" target="_blank">Anastasiya
+							But-Husaim</a></p>
+			</section>
+
+			<section>
+				<section>
+					<h2>History</h2>
+					<img src="assets/img/ts.jpg" height="500px">
+				</section>
+				<section>
+					<div class="inform-line">
+					<div class="inform-left-side">
+					<p><b>2010</b> - Start working on TypeScript at Microsoft</p>
+					<p><b>2012</b> - TypeScript 0.8</p>
+					<p><b>2013</b> - TypeScript 0.9</p>
+					<p><b>2014</b> - TypeScript 1</p>	
+					<p><b>2019</b> - TypeScript 3.4. More than 207K developers</p>
+				</div>
+				<div class="inform-right-side">
+					<img src="./assets/img/anders-hejlsberg.jpg" height="300px">
+					<p><strong>Anders Hejlsberg</strong> - the creator of TypeScript</p>
+				</div>
+					</div>
+				</section>
+				<section>
+					<p>TypeScript - <strong>OpenSource</strong> project</p>
+					<a href="https://github.com/Microsoft/TypeScript">https://github.com/Microsoft/TypeScript</a>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Why not just use JavaScript???</h2>
+					<img src="assets/img/Javascript-meme.jpg" height="500px">
+				</section>
+				<section>
+					<h2>JS problems</h2>
+					<div class="inform-line">
+						<div class="inform-left-side">
+					<ul>
+						<li>JS - non-modulers</li>
+						<li>Dynamic typing</li>
+						<li>Sometimes javascript behaves unpredictably.</li>
+					</ul>
+				</div>
+					<img src="assets/img/js-meme2.jpg" height="300px">
+				</div>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Advantages of TypeScript</h2>
+					<img src="assets/img/ts-meme.jpg" height="500px">
+				</section>
+				<section>
+					<h2>Advantages of TypeScript</h2>
+					<ul>
+						<li>Support Static typing</li>
+						<li>Strong tools for large apps</li>
+						<li>TypeScript offers support for the latest and evolving JavaScript features</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Setting Up TypeScript</h2>
+					<img src="assets/img/ts.png" height="500px">
+				</section>
+				<section>
+					<h3>Ways to get the TypeScript tools</h3>
+					<ul>
+						<li>Via npm (the Node.js package manager)</li>
+						<li>TypeScript’s Visual Studio plugins</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>NPM</h3>
+					<ul>
+						<li>
+							<p>Install TypeScript</p>
+							<pre><code class="hljs" data-trim data-line-numbers="1">npm install -g typescript</code></pre>
+						</li>
+						<li>
+							<p>Update to latest version</p>
+							<pre><code class="hljs" data-trim data-line-numbers="1">npm update -g typescript</code></pre>
+						</li>
+						<li>
+							<p>Check the version</p>
+							<pre><code class="hljs" data-trim data-line-numbers="1">tsc -v</code></pre>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+						<div class="inform-line">
+								<div class="inform-left-side">
+					<h2>Visual Studio plugins</h2>
+					<p>Visual Studio 2017 and Visual Studio 2015 Update 3 include TypeScript <strong>by default</strong>.</p>
+					</div>
+					<img src="assets/img/vs.png" height="300px">
+					</div>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>TypeScript features</h2>
+					<img src="assets/img/ts-meme2.jpg" height="500px">
+				</section>
+
+				<section>
+					<h3>Object Oriented Programming </h3>
+					<pre><code class="hljs" data-trim data-line-numbers="1-7">
+class Student {
+	fullName: string;
+	constructor(public firstName: string, public middleInitial: string,
+		public lastName: string) {
+		this.fullName = firstName + " " + middleInitial + " " + lastName;
+	}
+}
+</code></pre>
+				</section>
+
+				<section>
+						<h3>Strongly/Static Type</h3>
+						<pre><code class="hljs" data-trim data-line-numbers="1-7">
+let testnumber:  number = 6;
+testnumber = "myNumber"; // This will throw an error.
+testnumber = 5;
+		</code></pre>
+					</section>
+
+				<section>
+					<h3>Interfaces, Generics, Inheritance, and Method Access Modifiers</h3>
+					<h4>Interface</h4>
+					<pre><code class="hljs" data-trim data-line-numbers="1-10">
+	interface ITax {
+		taxpayerId: string;
+		calculateTax(): number;
+	}
+	class IncomeTax implements ITax {
+		taxpayerId: string;
+		calculateTax(): number {
+			return 10000;
+		}
+	}
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Interfaces, Generics, Inheritance, and Method Access Modifiers</h3>
+					<h4>Generic</h4>
+					<pre><code class="hljs" data-trim data-line-numbers="1-7">
+	function identity&lt;T&gt; (arg: T): T {
+		return arg; 
+	}
+										
+	let output = identity &lt;string&gt;("myString");
+	let outputl = identity &lt;number&gt; (23);
+	</code></pre>
+				</section>
+
+				<section>
+					<h3>Interfaces, Generics, Inheritance, and Method Access Modifiers</h3>
+					<h4>Inheritance</h4>
+					<pre><code class="hljs" data-trim data-line-numbers="1-14">
+	class Employee {
+		Firstname:string;
+	}
+
+	class Company extends Employee {
+			Department:string;
+			Role:string
+			private AddEmployee(){
+			this.Department="myDept";
+			this.Role="Manager";
+			this.FirstName="Test";
+			// do the operation
+			}
+	}
+		</code></pre>
+				</section>
+
+				<section>
+					<h3>Interfaces, Generics, Inheritance, and Method Access Modifiers</h3>
+					<h4>Access Modifiers and Properties</h4>
+					<pre><code class="hljs" data-trim data-line-numbers="1-4">	
+class Customers{
+	public companyname:string;
+	private country:string;
+}
+			</code></pre>
+				</section>
+
+				<section>
+					<h3>Supports Modules</h3>
+					<pre><code class="hljs" data-trim data-line-numbers="1-10">		
+module Company {
+	class Employee {
+	}
+	class EmployeeHelper {
+	targetEmployee: Employee;
+	}
+	export class Customer {
+	}
+}
+var obj = new Company.Customer();
+						</code></pre>
+				</section>
+
+				<section>
+					<h3>Function Overloading</h3>
+					<pre><code class="hljs" data-trim data-line-numbers="1-12">
+							
+class functionOverloading{
+	addCustomer(custId: number);
+	addCustomer(company: string);
+	addCustomer(value: any) {
+			if (value && typeof value == "number") {
+			alert("First overload - " + value);
+			}
+			if (value && typeof value == "string") {
+			alert("Second overload - " + value);
+			}
+	}
+}
+						</code></pre>
+				</section>
+
+				<section>
+					<h3>TypeScript compiler</h3>
+					<pre><code class="hljs" data-trim data-line-numbers="1">tsc file.ts</code></pre>
+				</section>
+
+				<section>
+					<h3>Readability and compatibility</h3>
+					<p>TypeScript code</p>
+					<pre><code class="hljs" data-trim data-line-numbers="1-9">
+class Greeter {
+	private greeting: string;
+	constructor (private message: string) {
+	this.greeting = message;
+	}
+	greet() {
+	return "Hello, " + this.greeting;
+	}
+}								
+									</code></pre>
+
+					<p>JavaScript code</p>
+					<pre><code class="hljs" data-trim data-line-numbers="1-10">							
+var Greeter = (function () {
+	function Greeter(message) {
+	this.greeting = message;
+	}
+	Greeter.prototype.greet = function () {
+	return "Hello, " + this.greeting;
+	};
+	return Greeter;
+})();
+</code></pre>
+				</section>
+
+			</section>
+
+			<section>
+				<h2>Thank you for attantion!</h2>
+				<img src="assets/img/thank-you.jpg">
+			</section>
+
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
